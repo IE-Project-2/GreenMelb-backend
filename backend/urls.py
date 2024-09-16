@@ -20,11 +20,9 @@ from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('plants/', include('plants.urls')),
-    
+    path('api/', include('api.urls')),
 ]
 
 if settings.DEBUG:
