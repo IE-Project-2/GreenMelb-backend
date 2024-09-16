@@ -48,7 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'classification',
     'rest_framework',
-    'maps'
+    'maps',
+    'plants',
+    'predictions'
 ]
 
 MIDDLEWARE = [

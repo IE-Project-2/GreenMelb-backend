@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { margin-top: 50px; }
+        button { padding: 15px 30px; margin: 10px; border: none; border-radius: 5px; color: #fff; background-color: #007BFF; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Iteration 2 EPICs testing Page</h1>
+        <p>Click the buttons below to navigate to different views:</p>
+        <a href="{% url 'compost_guide' %}"><button>Composting Guide</button></a>
+        <a href="{% url 'compost_calculator' %}"><button>Compost Calculator</button></a>
+        <a href="{% url 'recommend_plant' %}"><button>Plant Recommendation</button></a>
+        <a href="{% url 'plant_full_list' %}"><button>Plant Full List</button></a>   
+    </div>
+</body>
+</html>

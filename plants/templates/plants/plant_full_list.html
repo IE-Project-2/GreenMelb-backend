@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Plants</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .plant-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .plant-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .plant-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .plant-box h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .plant-box p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>All Available Plants</h1>
+
+    <div class="plant-container">
+        {% if plants %}
+            {% for plant in plants %}
+                <div class="plant-box">
+                    <img src="{{ plant.photo_url }}" alt="{{ plant.name }}">
+                    <h2>{{ plant.name }} ({{ plant.scientific_name }})</h2>
+                    <p><strong>Category:</strong> {{ plant.category }}</p>
+                    <p><strong>Flowering Category:</strong> {{ plant.flowering_category }}</p>
+                    <p><strong>Location:</strong> {{ plant.location }}</p>
+                    <p><strong>Maintenance Type:</strong> {{ plant.maintenance_type }}</p>
+                    <p><strong>Description:</strong> {{ plant.description }}</p>
+                    <p><strong>Watering Needs:</strong> {{ plant.watering_needs }}</p>
+                    <p><strong>Sunlight Needs:</strong> {{ plant.sunlight_needs }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No plants found.</p>
+        {% endif %}
+    </div>
+
+    <a class="back-link" href="{% url 'recommend_plant' %}">Go back to plant recommendations</a>
+
+</body>
+</html>
