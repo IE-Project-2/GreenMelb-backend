@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plant Recommendation</title>
+</head>
+<body>
+    <h1>Plant Recommendation Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="category">Category:</label>
+        <select name="category" id="category">
+            <option value="">Select a category</option>
+            <option value="Flowering">Flowering</option>
+            <option value="Non-Flowering">Non-Flowering</option>
+            <!-- Add more options as needed -->
+        </select><br><br>
+
+        <label for="sunlight_needs">Sunlight Needs:</label>
+        <select name="sunlight_needs" id="sunlight_needs">
+            <option value="">Select sunlight needs</option>
+            <option value="Full Sun">Full Sun</option>
+            <option value="Partial Shade">Partial Shade</option>
+            <option value="Full Shade">Full Shade</option>
+            <!-- Add more options as needed -->
+        </select><br><br>
+
+        <label for="watering_needs">Watering Needs:</label>
+        <select name="watering_needs" id="watering_needs">
+            <option value="">Select watering needs</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+            <!-- Add more options as needed -->
+        </select><br><br>
+
+        <input type="submit" value="Get Recommendation">
+    </form>
+</body>
+</html>

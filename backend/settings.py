@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'classification',
     'rest_framework',
     'maps',
+    'plants',
     'predictions'
 ]
 
