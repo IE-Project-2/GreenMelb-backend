@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'maps',
     'plants',
-    'predictions'
+    'predictions',
+    'videoclassifier'
 ]
 
 MIDDLEWARE = [

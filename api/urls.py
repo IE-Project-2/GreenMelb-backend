@@ -22,4 +22,5 @@ urlpatterns = [
     path('maps/', include('maps.urls')),  # Include URLs from the classification app
     path('predict/', include('predictions.urls')),
     path('plants/', include('plants.urls')),
+    path('videoclassifier/', include('videoclassifier.urls')),
 ]
