@@ -17,10 +17,32 @@ except Exception as e:
 
 # Define waste categories
 waste_categories = {
-    'recyclable': ['bottle', 'can', 'paper', 'plastic', 'glass bottle', 'cardboard'],
-    'ewaste': ['cell phone', 'laptop', 'charger', 'headphones', 'monitor'],
-    'organic': ['apple', 'banana', 'carrot', 'egg', 'bread']
+    'recyclable': [
+        'bottle', 'can', 'paper', 'cardboard', 'plastic', 'cup', 'glass bottle', 'tin', 
+        'aluminum', 'foil', 'plastic bag', 'straw', 'food container', 'magazine', 
+        'newspaper', 'catalog', 'jar', 'milk carton', 'juice carton', 'soda can', 
+        'water bottle', 'metal', 'shampoo bottle', 'detergent bottle', 'wrapping paper', 
+        'plastic utensils', 'egg carton', 'cardboard box', 'envelope', 'aluminum can', 
+        'metal can', 'steel', 'tin can', 'takeout container', 'plastic lid', 'card'
+    ],
+    'ewaste': [
+        'cell phone', 'laptop', 'remote', 'tablet', 'computer', 'keyboard', 'mouse', 
+        'charger', 'headphones', 'earbuds', 'monitor', 'television', 'printer', 'scanner', 
+        'fax machine', 'camera', 'smartwatch', 'game console', 'dvd player', 'blu-ray player', 
+        'router', 'modem', 'hard drive', 'flash drive', 'memory card', 'cord', 'cable', 
+        'microwave', 'oven', 'stereo', 'speakers', 'projector', 'calculator', 'battery', 'batteries'
+    ],
+    'organic': [
+        'apple', 'banana', 'carrot', 'orange', 'broccoli', 'lettuce', 'cucumber', 'tomato', 
+        'grape', 'strawberry', 'pear', 'pineapple', 'peach', 'plum', 'kiwi', 'cherry', 
+        'watermelon', 'mango', 'spinach', 'onion', 'pepper', 'avocado', 'potato', 'sweet potato', 
+        'corn', 'peas', 'beans', 'eggplant', 'beet', 'celery', 'mushroom', 'zucchini', 
+        'garlic', 'lemon', 'lime', 'ginger', 'cabbage', 'pumpkin', 'squash', 'radish', 'coconut',
+        'eggshell', 'egg', 'coffee grounds', 'tea leaves', 'bread', 'cereal', 'pasta', 'rice', 'oatmeal',
+        'chicken bone', 'fish bone', 'meat scraps'
+    ]
 }
+
 
 # Classify waste
 def classify_waste(label):
