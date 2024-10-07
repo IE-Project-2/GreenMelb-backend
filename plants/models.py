@@ -44,7 +44,7 @@ class Plant(models.Model):
     scientific_name = models.CharField(db_column='ScientificName', max_length=150)
     category = models.ForeignKey('Category', on_delete=models.CASCADE, db_column='CategoryID')
     flowering_category = models.ForeignKey('FloweringCategory', on_delete=models.CASCADE, db_column='FloweringID')
-    location = models.ForeignKey('Location', on_delete=models.CASCADE, db_column='LocationID')
+    # location = models.ForeignKey('Location', on_delete=models.CASCADE, db_column='LocationID')
     maintenance_type = models.ForeignKey('MaintenanceType', on_delete=models.CASCADE, db_column='MaintenanceID')
     short_description = models.TextField(db_column='ShortDescription', blank=True, null=True)
     watering_frequency = models.CharField(db_column='WateringFrequency', max_length=50, blank=True, null=True)
@@ -75,12 +75,12 @@ class PlantNeeds(models.Model):
     class Meta:
         db_table = 'plants_plant_needs'
 
-class Location(models.Model):
-    location_id = models.AutoField(primary_key=True, db_column='LocationID')
-    location = models.CharField(max_length=20, db_column='Location')
+# class Location(models.Model):
+#     location_id = models.AutoField(primary_key=True, db_column='LocationID')
+#     location = models.CharField(max_length=20, db_column='Location')
 
-    def __str__(self):
-        return self.location
+#     def __str__(self):
+#         return self.location
 
-    class Meta:
-        db_table = 'Locations_Plants'
+#     class Meta:
+#         db_table = 'Locations_Plants'
