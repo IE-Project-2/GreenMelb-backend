@@ -42,8 +42,15 @@ def estimate_waste(data):
     elif data['large_item_disposal'] == 'Occasionally':
         waste_estimates['mattresses'] = 10
 
-    # Return the waste estimates (by category)
-    return waste_estimates
+    # Group waste into three categories
+    grouped_waste = {
+        'Recyclable': waste_estimates['commingled_recycling'] + waste_estimates['cardboard'] + waste_estimates['hardwaste_recovered'],
+        'General Waste': waste_estimates['public_litter_bins'] + waste_estimates['dumped_rubbish'] + waste_estimates['street_sweepings'] + waste_estimates['mattresses'] + waste_estimates['hardwaste_to_landfill'],
+        'Organic': waste_estimates['green_waste']
+    }
+
+    return grouped_waste
+
 
 class WastePredictionView(APIView):
     def post(self, request):
